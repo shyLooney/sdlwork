@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">
+    <input type="text" name="id">
+    <input type="text" name="fullName">
+    <input type="submit"/>
+</form>
+
+<h1>Данные из базы</h1>
+<table>
+
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>
+    <tr th:each="item : ${students}">
+        <td>
+            <a th:text="${item.getId()}">a</a>
+        </td>
+        <td>
+            <a th:text="${item.getFullName()}">a</a>
+        </td>
+        <br>
+    </tr>
+</table>
+
+</body>
+</html>
